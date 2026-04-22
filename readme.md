@@ -95,7 +95,7 @@ git clone https://github.com/prasad-droid/MorseType.git
 
 ## 🌐 Live Demo
 
-[(Live Demo)](https://morsetype.netlify.app/)
+[(Live Demo)](https://morse-type.netlify.app/)
 
 ---
 
