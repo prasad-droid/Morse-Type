@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="canonical" href="https://morsetype.netlify.app/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MorseType - Practice Morse Code Online | Learn & Train Fast</title>
+    <meta
+      name="description"
+      content="Practice Morse code online with a real-time typing trainer. Learn Morse code, improve speed, and test your skills with interactive exercises."
+    />
+    <meta
+      name="keywords"
+      content="morse code, morse code generator, learn morse code, practice morse code, morse typing trainer, morse code translator, morse practice tool"
+    />
+    <meta name="author" content="Your Name" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="MorseType - Learn & Practice Morse Code"
+    />
+    <meta
+      property="og:description"
+      content="Train Morse code like Monkeytype. Improve speed, accuracy and skills with real-time feedback."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="favicon.ico" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="options">
+        <div class="opt-group">
+          <button data-opt="numbers" onclick="toggleOption('alphabets', this)">
+            Alphabets
+          </button>
+          <button data-opt="numbers" onclick="toggleOption('numbers', this)">
+            # numbers
+          </button>
+          <button
+            data-opt="punctuation"
+            onclick="toggleOption('punctuation', this)"
+          >
+            @ punctuation
+          </button>
+        </div>
+
+        <div class="opt-group">
+          <button onclick="setMode('time', this)">⏱ time</button>
+          <button onclick="setMode('words', this)">A words</button>
+        </div>
+
+        <div class="opt-group">
+          <button onclick="setTime(15, this)">15</button>
+          <button onclick="setTime(30, this)">30</button>
+          <button onclick="setTime(60, this)">60</button>
+          <button onclick="setTime(120, this)">120</button>
+        </div>
+      </div>
+      <h1>MorseType</h1>
+
+      <!-- STATS -->
+      <div class="stats">
+        <span>Time: <b id="time">0</b>s</span>
+        <span>Speed: <b id="wpm">0</b> CPM</span>
+        <span>Accuracy: <b id="acc">100</b>%</span>
+      </div>
+
+      <!-- TARGET TEXT -->
+      <div id="textDisplay"></div>
+
+      <!-- USER OUTPUT -->
+      <div class="inputDisplay">
+        <span id="userText"></span>
+      </div>
+
+      <!-- TAP AREA -->
+      <div id="tapArea">Tap / Hold</div>
+
+      <button onclick="generateText()">Restart</button>
+      <div class="morseGuide">
+        <h3>Morse Guide</h3>
+        <div id="morseGrid"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
